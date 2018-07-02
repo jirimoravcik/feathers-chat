@@ -106,7 +106,7 @@ const addMessage = message => {
     <div class="message-wrapper">
       <p class="message-header">
         <span class="username font-600">${user.email}</span>
-        <span class="sent-date font-300">${moment(message.createdAt).format('MMM Do, hh:mm:ss')}</span>
+        <span class="sent-date font-300">${moment(message.created_at).format('MMM Do, hh:mm:ss')}</span>
       </p>
       <p class="message-content font-300">${text}</p>
     </div>
@@ -132,7 +132,7 @@ const showChat = async () => {
   // which is why we have to reverse before adding them
   const messages = await client.service('messages').find({
     query: {
-      $sort: { createdAt: -1 },
+      $sort: { created_at: -1 },
       $limit: 25
     }
   });

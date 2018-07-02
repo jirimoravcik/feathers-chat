@@ -24,7 +24,7 @@ describe('\'messages\' service', () => {
 
     assert.equal(message.text, 'a test');
     // `userId` should be set to passed users it
-    assert.equal(message.userId, user._id);
+    assert.equal(message.user_id, user.id);
     // Additional property has been removed
     assert.ok(!message.additional);
     // `user` has been populated

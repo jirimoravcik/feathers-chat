@@ -23,11 +23,11 @@
   },
   "scripts": {
     "test": "npm run eslint && npm run coverage",
-    "coverage": "npm run clean && NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha -- test/ --recursive --exit",
+    "coverage": "npm run clean && SET NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha -- test/ --recursive --exit",
     "eslint": "eslint src/. test/. --config .eslintrc.json --fix",
     "start": "node src/",
     "clean": "shx rm -rf test/data/",
-    "mocha": "npm run clean && NODE_ENV=test mocha test/ --recursive --exit"
+    "mocha": "npm run clean && SET NODE_ENV=test mocha test/ --recursive --exit"
   },
   "dependencies": {
     "@feathersjs/authentication": "^2.0.1",
