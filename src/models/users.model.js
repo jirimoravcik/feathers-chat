@@ -1,14 +1,5 @@
 
 module.exports = function (app) {
-  // const dbPath = app.get('nedb');
-  // const Model = new NeDB({
-  //   filename: path.join(dbPath, 'users.db'),
-  //   autoload: true
-  // });
-
-  // Model.ensureIndex({ fieldName: 'email', unique: true });
-
-  // return Model;
   const db = app.get('knexClient');
   const tableName = 'users';
   db.schema.hasTable(tableName).then(exists => {
