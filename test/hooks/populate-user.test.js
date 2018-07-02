@@ -36,7 +36,7 @@ describe('\'populate-user\' hook', () => {
     const message = await app.service('messages').create({
       text: 'A test message',
       // Set `userId` manually (usually done by `process-message` hook)
-      userId: user.id
+      user_id: user.id
     });
 
     // Make sure that user got added to the returned message

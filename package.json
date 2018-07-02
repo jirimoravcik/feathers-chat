@@ -23,11 +23,11 @@
   },
   "scripts": {
     "test": "npm run eslint && npm run coverage",
-    "coverage": "npm run clean && NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha -- test/ --recursive --exit",
+    "coverage": "npm run clean && SET NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha -- test/ --recursive --exit",
     "eslint": "eslint src/. test/. --config .eslintrc.json --fix",
     "start": "node src/",
     "clean": "shx rm -rf test/data/",
-    "mocha": "npm run clean && NODE_ENV=test mocha test/ --recursive --exit"
+    "mocha": "npm run clean && SET NODE_ENV=test mocha test/ --recursive --exit"
   },
   "dependencies": {
     "@feathersjs/authentication": "^2.0.1",
@@ -40,8 +40,11 @@
     "@feathersjs/socketio": "^3.0.1",
     "compression": "^1.7.1",
     "cors": "^2.8.4",
+    "feathers-knex": "^3.3.0",
     "feathers-nedb": "^3.0.0",
     "helmet": "^3.9.0",
+    "knex": "^0.14.6",
+    "mssql": "^4.1.0",
     "nedb": "^1.8.0",
     "serve-favicon": "^2.4.5",
     "winston": "^3.0.0"

@@ -39,7 +39,7 @@ describe('\'process-message\' hook', () => {
 
     assert.equal(message.text, 'Hi there');
     // `userId` was set
-    assert.equal(message.userId, 'test');
+    assert.equal(message.user_id, 'test');
     // `additional` property has been removed
     assert.ok(!message.additional);
   });

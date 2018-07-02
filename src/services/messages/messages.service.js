@@ -1,5 +1,5 @@
 // Initializes the `messages` service on path `/messages`
-const createService = require('feathers-nedb');
+const createService = require('feathers-knex');
 const createModel = require('../../models/messages.model');
 const hooks = require('./messages.hooks');
 
