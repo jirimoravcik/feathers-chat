@@ -132,7 +132,7 @@ const showChat = async () => {
   // which is why we have to reverse before adding them
   const messages = await client.service('messages').find({
     query: {
-      $sort: { created_at: -1 },
+      $sort: { id: -1 },
       $limit: 25
     }
   });
